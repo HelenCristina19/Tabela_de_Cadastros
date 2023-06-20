@@ -59,29 +59,24 @@
     </table>
     <caption>Resultado Final</caption>
 
-<button type="button" id="botao">Remover Estilo</button>
-
-<script>
-    function AlternaEstilos(){
-        const linkEstilos = document.querySelector('#linkEstilos');
-        const botao = document.querySelector('#botaoEstilo');
-
-        if(linkEstilos.hasAttribute('disabled')) {
-            linkEstilos.hasAttribute('disabled');
-            botao.innerHTML = "Remover estilo";
-
-        } else {
-            linkEstilos.setAttribute('disabled', '');
-            botao.innerHTML = "Aplicar estilos";
-        
+    <button type="button" id="botaoEstilo">Remove estilos</button>
+    <script>
+        function toggleEstilos() {
+            const link = document.querySelector('#linkEstilos');
+            
+            if(link.hasAttribute('disabled')) {
+                link.removeAttribute('disabled');
+                botao.innerHTML = "Remove estilos";
+                
+            } else {
+                link.setAttribute('disabled', '');
+                botao.innerHTML = "Aplica estilos";
+            }
         }
-    }
 
-    const botao = document.querySelector('#botão');
-    botao.addEventListener('click', toggleEstios);
+        const botao = document.querySelector('#botaoEstilo');
+        botao.addEventListener('click', toggleEstilos);
+    </script>
 
-</script>
-  
 </body>
 </html>
-<!--falta terminar-->
