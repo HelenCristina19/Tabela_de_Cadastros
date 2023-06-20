@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" id="linkEstilos">
+    <title>Tabela</title>
+
+</head>
+<body>
+    <h1>Costruindo uma Tabela</h1>
+
+    <table>
+        <caption>Cadastro de Funcionários</caption>
+       <thead>
+        <tr>
+            <th>Id do Funcionário</th>
+            <th>Nome do Funcionário</th>
+            <th>Cargo</th>
+            <th>Empresa</th>
+            <th>Email</th>
+            <th>Possui crachá?</th>
+        </tr>
+
+       </thead>
+       <tbody>
+        <tr>
+            <td>628966743</td>
+            <td>Carlos Alberto Dantas Almeida</td>
+            <td>Tech Recruter</td>
+            <td>Santander</td>
+            <td>Albertoca21@gmail.com</td>
+            <td>Sim, possui</td>
+        </tr>
+        <tr>
+            <td>345698210</td>
+            <td>Beatriz Carolina Souza Santos</td>
+            <td>Analista de Suporte</td>
+            <td>First</td>
+            <td>Biasantoss@gmail.com</td>
+            <td>Sim, possui</td>
+        </tr>
+          <tr>
+            <td>278991588</td>
+            <td>Ana Rita de Carvalho</td>
+            <td>Analista de Marketing</td>
+            <td>Porto Seguro</td>
+            <td>Anaritta27@gmail.com</td>
+            <td>Não, possui</td>
+        </tr>
+       </tbody>
+       <tfoot>
+        <tr>
+            <td colspan="3">Quantidade Total</td>
+            <td>3</td>
+        </tr>
+       </tfoot>
+    </table>
+    <caption>Resultado Final</caption>
+
+<button type="button" id="botao">Remover Estilo</button>
+
+<script>
+    function AlternaEstilos(){
+        const linkEstilos = document.querySelector('#linkEstilos');
+        const botao = document.querySelector('#botaoEstilo');
+
+        if(linkEstilos.hasAttribute('disabled')) {
+            linkEstilos.hasAttribute('disabled');
+            botao.innerHTML = "Remover estilo";
+
+        } else {
+            linkEstilos.setAttribute('disabled', '');
+            botao.innerHTML = "Aplicar estilos";
+        
+        }
+    }
+
+    const botao = document.querySelector('#botão');
+    botao.addEventListener('click', toggleEstios);
+
+</script>
+  
+</body>
+</html>
+<!--falta terminar-->
